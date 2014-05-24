@@ -24,6 +24,7 @@
         </activity>
         <activity android:label="@string/app_name" android:name="ua.cn.privly_gui.socialnetworks.SListUserMessagesActivity" />
         <activity android:label="@string/app_name" android:name="ua.cn.privly_gui.socialnetworks.SListUsersActivity" />
+         <activity android:label="@string/app_name" android:name="ua.cn.privly_gui.microblogs.MicroblogListPostsActivity" />
     </application>
 
 </manifest>

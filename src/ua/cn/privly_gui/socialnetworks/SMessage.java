@@ -16,24 +16,20 @@ public class SMessage implements Serializable {
 		this.mIsMyMessage = true;
 	}
 
-
-
 	/**
 	 * @param mIsMyMessage
 	 * @param mMessage
 	 * @param mTime
 	 * @param mUrlToAvatar
 	 */
-	public SMessage(String mMessage, String mTime,
-			String mUrlToAvatar,boolean mIsMyMessage) {
+	public SMessage(String mMessage, String mTime, String mUrlToAvatar,
+			boolean mIsMyMessage) {
 		super();
 		this.mIsMyMessage = mIsMyMessage;
 		this.mMessage = mMessage;
 		this.mTime = mTime;
 		this.mUrlToAvatar = mUrlToAvatar;
 	}
-
-
 
 	public boolean IsMyMessage() {
 		return mIsMyMessage;

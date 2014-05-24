@@ -18,8 +18,8 @@ public class SUser implements Serializable {
 		this.mListUserMess = null;
 	}
 
-	public SUser(String mUserName,String mLastUserMess,
-			String mTime, String mUrlToAvatar, ArrayList<SMessage> mListUserMess) {
+	public SUser(String mUserName, String mLastUserMess, String mTime,
+			String mUrlToAvatar, ArrayList<SMessage> mListUserMess) {
 		super();
 		this.mLastUserMess = mLastUserMess;
 		this.mListUserMess = mListUserMess;

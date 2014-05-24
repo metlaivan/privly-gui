@@ -2,6 +2,8 @@ package ua.cn.privly_gui;
 
 import java.util.ArrayList;
 
+import ua.cn.privly_gui.microblogs.MicroblogListPostsActivity;
+import ua.cn.privly_gui.microblogs.Post;
 import ua.cn.privly_gui.socialnetworks.SListUserMessagesActivity;
 import ua.cn.privly_gui.socialnetworks.SListUsersActivity;
 import ua.cn.privly_gui.socialnetworks.SMessage;
@@ -76,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
 				Intent localIntent = new Intent(MainActivity.this
 						.getApplicationContext(), SListUsersActivity.class);
 				localIntent.putExtra("UserInfo", localArrayList1);
-				MainActivity.this.startActivity(localIntent);
+				startActivity(localIntent);
 			}
 		});
 		Button btnlist = (Button) findViewById(R.id.blistmess);
@@ -99,7 +101,36 @@ public class MainActivity extends ActionBarActivity {
 						.getApplicationContext(),
 						SListUserMessagesActivity.class);
 				localIntent.putExtra("UserMessages", localArrayList);
-				MainActivity.this.startActivity(localIntent);
+				startActivity(localIntent);
+			}
+		});
+
+		Button bMicroblog = (Button) findViewById(R.id.bMicroblog);
+		bMicroblog.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				ArrayList<Post> localArrayList = new ArrayList<Post>();
+				localArrayList.add(new Post("name1", "@nic", "1 d",
+						"sadasdsadsadsa", ""));
+				localArrayList.add(new Post("name11111111111111111", "@nic1",
+						"1 d", "sadasdsadsadsa", ""));
+				localArrayList.add(new Post("name1", "@nic11111111", "1 d",
+						"sadasdsadsadsa", ""));
+				localArrayList.add(new Post("name1", "@nic", "1 d",
+						"sadasdsadsadsa1111111111111111111111111111111111111"
+								+ "1111111111111111111111111111111111111111"
+								+ "1111111111111111wwwwwwwwwwwwwwwwwwww"
+								+ "sssssssssssssssssssssssss"
+								+ "dddddddddddddddddddddddddd", ""));
+				localArrayList.add(new Post("name1 2222222222 222w wwwwwww wwsss",
+						"@nic", "1 d", "sadasdsadsadsa", ""));
+				Intent iIntent = new Intent(MainActivity.this
+						.getApplicationContext(),
+						MicroblogListPostsActivity.class);
+				iIntent.putExtra("UserPosts", localArrayList);
+				startActivity(iIntent);
+
 			}
 		});
 	}
